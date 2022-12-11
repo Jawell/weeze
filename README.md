@@ -8,8 +8,9 @@
 
 ### Initial steps
 
-1. `$ make init` - install `node_modules`, init migrations, run seeds
-2. `$ yarn weather:fetch` - run a script to fetch weather for available cities
+1. `$ make up` - run docker containers
+2. `$ make init` - install `node_modules`, init migrations, run seeds
+3. `$ yarn weather:fetch` - run a script to fetch weather for available cities
 
 ### API
 
