@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "11a326ad-18bb-4be0-bc4b-75e33cefad41",
+		"name": "Weeze",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10686917"
+	},
+	"item": [
+		{
+			"name": "Get weather for city and date",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/v1/weather?city=Sofia&date=today",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "city",
+							"value": "Sofia"
+						},
+						{
+							"key": "date",
+							"value": "today"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get available cities",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/v1/weather/available-cities",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"weather",
+						"available-cities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get temperature average for a city",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/v1/weather/temperature-avg?city=Tirana",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"weather",
+						"temperature-avg"
+					],
+					"query": [
+						{
+							"key": "city",
+							"value": "Tirana"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get most searched city",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/v1/weather/popular-city",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"weather",
+						"popular-city"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "http://localhost:3000",
+			"type": "string"
+		}
+	]
+}

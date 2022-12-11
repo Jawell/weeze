@@ -1,0 +1,40 @@
+{
+  "extends": [
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "parserOptions": {
+    "project": ["./tsconfig.json"],
+    "sourceType": "module",
+    "ecmaVersion": 2021
+  },
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["prettier"],
+  "rules": {
+    "@typescript-eslint/no-var-requires": "off",
+    "import/no-default-export": "off",
+    "prettier/prettier": "error",
+    "semi": "error",
+    "@typescript-eslint/semi": "error",
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-explicit-any": "error",
+    "comma-dangle": [2, "always-multiline"],
+    "@typescript-eslint/comma-dangle": [2, "always-multiline"],
+    "eol-last": "error",
+    "no-console": [
+      "error",
+      {
+        "allow": ["info", "error"]
+      }
+    ],
+    "object-curly-spacing": [
+      "error",
+      "always",
+      {
+        "objectsInObjects": true,
+        "arraysInObjects": true
+      }
+    ]
+  }
+}

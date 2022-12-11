@@ -1,0 +1,49 @@
+{
+  "name": "weeze",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "nodemon src/index.ts",
+    "build": "tsc -p .",
+    "lint": "eslint src/**",
+    "typeorm": "typeorm-ts-node-commonjs -d ./src/connections/postgres.connection.ts",
+    "migration:create": "typeorm-ts-node-commonjs migration:create",
+    "migration:revert": "yarn run typeorm migration:generate",
+    "migration:generate": "yarn run typeorm migration:generate",
+    "migration:show": "yarn run typeorm migration:show",
+    "seed:run": "ts-node ./node_modules/typeorm-seeding/dist/cli.js seed --configName ./src/connections/postgres.connection.ts",
+    "seed:config": "ts-node ./node_modules/typeorm-seeding/dist/cli.js config",
+    "weather:fetch": "ts-node ./src/scripts/weather-fetch.ts"
+  },
+  "engines": {
+    "npm": ">=8.0.0",
+    "node": ">=16.0.0"
+  },
+  "packageManager": "yarn@1.22.18",
+  "author": "Vlad Hrytsev",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/express": "^4.17.14",
+    "@types/node": "^18.11.11",
+    "@typescript-eslint/eslint-plugin": "^5.19.0",
+    "@typescript-eslint/parser": "^5.19.0",
+    "eslint": "^8.13.0",
+    "eslint-config-prettier": "^8",
+    "eslint-plugin-prettier": "^4.0.0",
+    "nodemon": "^2.0.20",
+    "prettier": "^2.6.2",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.1.1",
+    "typeorm-seeding": "^1.6.1",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "date-fns": "^2.29.3",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "pg": "^8.8.0",
+    "typeorm": "^0.3.11"
+  }
+}
