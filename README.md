@@ -12,6 +12,11 @@
 2. `$ make init` - install `node_modules`, init migrations, run seeds
 3. `$ yarn weather:fetch` - run a script to fetch weather for available cities
 
+### Run project
+
+1. `$ make up` - run docker containers
+2. `$ yarn dev` - run server 
+
 ### API
 
 API available on `http://localhost:3000`, with global prefix `/api/v1`
